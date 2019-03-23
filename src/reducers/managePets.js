@@ -19,11 +19,13 @@ export function dispatch(action) {
 
 export function render() {
   const main = document.getElementById('main');
-  const petsHtml = state.pets.map(pet => {
-    return `<li>${pet.name}</li>`;
-  });
   
-  main.innerHTML = "<ul>";
-  main.innerHTML += petsHtml.forEach(pet => return pet);
-  main.innerHTML += "</ul>";
+  if (state.pets.length > 0) {
+    const petsHtml = state.pets.map(pet => {
+      return `<li>${pet.name}</li>`;
+    });
+    
+    main.innerHTML = "<ul>";
+    main.innerHTML += petsHtml.forEach(pet => return pet);
+    main.innerHTML += "</ul>";
 }
