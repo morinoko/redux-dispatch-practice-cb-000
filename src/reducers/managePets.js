@@ -8,7 +8,7 @@ export function managePets(state = {pets: []}, action) {
        pets: [...state.pets, action.pet]
       };
     case "REMOVE_PET":
-      removalIndex = state.pets.findIndex(pet => pet.id === action.id);
+      let removalIndex = state.pets.findIndex(pet => pet.id === action.id);
       return {
         pets: [
           ...state.pets.slice(0, removalIndex),
