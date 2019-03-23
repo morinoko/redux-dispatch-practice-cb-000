@@ -37,6 +37,4 @@ export function render() {
     container.innerHTML += petsHtml.forEach(pet => pet);
     container.innerHTML += "</ul>";
   }
-  
-  return;
 }
