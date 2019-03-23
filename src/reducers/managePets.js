@@ -8,7 +8,7 @@ export function managePets(state = {pets: []}, action) {
        pets: [...state.pets, action.pet]
       };
     case "REMOVE_PET":
-      return state;
+      
     default:
       return state;
   }
