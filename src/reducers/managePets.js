@@ -28,13 +28,13 @@ export function dispatch(action) {
 export function render() {
   const container = document.getElementById('container');
   
+  container.innerHTML = "<ul>";
+  
   if (state.pets.length > 0) {
-    const petsHtml = state.pets.map(pet => {
-      return `<li>${pet.name}</li>`;
+    state.pets.forEach(pet => {
+      container.innerHTML += `<li>${pet.name}</li>`;
     });
-    
-    container.innerHTML = "<ul>";
-    container.innerHTML += petsHtml.forEach(pet => pet);
-    container.innerHTML += "</ul>";
   }
+  
+  container.innerHTML += "</ul>";
 }
