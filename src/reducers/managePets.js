@@ -1,14 +1,14 @@
 export let state;
 
 
-export function managePets(){
+export function managePets(state = {pets: []}, action) {
   
 }
 
-export function dispatch(){
+export function dispatch() {
   
 }
 
-export function render(){
+export function render() {
 
 }
