@@ -27,7 +27,7 @@ export function dispatch(action) {
 
 export function render() {
   const container = document.getElementById('container');
-  
+  container
   container.innerHTML = "<ul>";
   
   if (state.pets.length > 0) {
