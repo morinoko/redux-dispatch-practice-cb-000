@@ -29,8 +29,8 @@ export function render() {
   const container = document.getElementById('container');
   
   if (state.pets.length > 0) {
-    container.innerHTML = '<ul id="pets"></ul>';
-    const ul = document.getElementById('pets');
+    container.innerHTML = '<ul></ul>';
+    const ul = document.querySelector('ul');
     
     state.pets.forEach(pet => {
       ul.innerHTML += `<li>${pet.name}</li>`;
