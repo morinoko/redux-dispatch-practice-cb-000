@@ -29,10 +29,11 @@ export function render() {
   const container = document.getElementById('container');
   
   if (state.pets.length > 0) {
-    container.appendChild(document.createElement("<ul>"));
+    container.append(document.createElement("<ul id='pets'>"));
+    const ul = document.getElementById('pets');
     
     state.pets.forEach(pet => {
-      container.innerHTML += `<li>${pet.name}</li>`;
+      ul.append(`<li>${pet.name}</li>`);
     });
   }
 
