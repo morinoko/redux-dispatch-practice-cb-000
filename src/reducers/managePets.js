@@ -27,8 +27,7 @@ export function dispatch(action) {
 
 export function render() {
   const container = document.getElementById('container');
-  container
-  container.innerHTML = "<ul>";
+  container.appendChild(document.createElement("<ul>"));
   
   if (state.pets.length > 0) {
     state.pets.forEach(pet => {
