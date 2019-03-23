@@ -27,13 +27,13 @@ export function dispatch(action) {
 
 export function render() {
   const container = document.getElementById('container');
-  container.appendChild(document.createElement("<ul>"));
   
   if (state.pets.length > 0) {
+    container.appendChild(document.createElement("<ul>"));
+    
     state.pets.forEach(pet => {
       container.innerHTML += `<li>${pet.name}</li>`;
     });
   }
-  
-  container.innerHTML += "</ul>";
+
 }
