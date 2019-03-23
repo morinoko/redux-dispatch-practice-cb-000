@@ -26,7 +26,7 @@ export function render() {
     });
     
     main.innerHTML = "<ul>";
-    main.innerHTML += petsHtml.forEach(pet => return pet);
+    main.innerHTML += petsHtml.forEach(pet => pet);
     main.innerHTML += "</ul>";
   }
   
