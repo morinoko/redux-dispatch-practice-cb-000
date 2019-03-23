@@ -26,16 +26,16 @@ export function dispatch(action) {
 }
 
 export function render() {
-  const main = document.getElementById('main');
+  const container = document.getElementById('container');
   
   if (state.pets.length > 0) {
     const petsHtml = state.pets.map(pet => {
       return `<li>${pet.name}</li>`;
     });
     
-    main.innerHTML = "<ul>";
-    main.innerHTML += petsHtml.forEach(pet => pet);
-    main.innerHTML += "</ul>";
+    container.innerHTML = "<ul>";
+    container.innerHTML += petsHtml.forEach(pet => pet);
+    container.innerHTML += "</ul>";
   }
   
   return;
