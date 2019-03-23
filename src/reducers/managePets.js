@@ -28,4 +28,7 @@ export function render() {
     main.innerHTML = "<ul>";
     main.innerHTML += petsHtml.forEach(pet => return pet);
     main.innerHTML += "</ul>";
+  }
+  
+  return;
 }
