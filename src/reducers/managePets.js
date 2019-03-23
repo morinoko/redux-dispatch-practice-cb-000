@@ -8,10 +8,11 @@ export function managePets(state = {pets: []}, action) {
        pets: [...state.pets, action.pet]
       };
     case "REMOVE_PET":
-      petToRemoveIndex = state.pets.findIndex(pet => pet.id === action.id);
+      removalIndex = state.pets.findIndex(pet => pet.id === action.id);
       return {
         pets: [
-          ...state.pets.splice()  
+          ...state.pets.slice(0, removalIndex),
+          ...state.pets.slice(removalIndex + 1)
         ]
       }
     default:
